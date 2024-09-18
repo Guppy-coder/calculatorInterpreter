@@ -3,12 +3,17 @@ import java.util.Scanner;
 public class main {
 
     public static void main(String[] args) {
-        System.out.print("calc>");
 
-        String input = new main().getInput();
 
-        Interpreter interpreter = new Interpreter(input);
-        interpreter.expr();
+        while (true) {
+            System.out.print("calc>");
+            String input = new main().getInput();
+
+            Interpreter interpreter = new Interpreter(input);
+            int result = interpreter.expr();
+            System.out.println(result);
+        }
+
     }
 
     private String getInput() {
